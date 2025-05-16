@@ -21,7 +21,7 @@ pipeline {
         script {
             if (fileExists('package.json')) {
                 echo 'Running npm audit...'
-                bat 'npm audit'
+                sh 'npm audit'
             } else {
                 echo 'Skipping npm audit because package.json is missing.'
             }
